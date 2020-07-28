@@ -8,6 +8,14 @@ repositories {
     mavenCentral()
 }
 
+bootRun.environment([
+        "WELCOME_MESSAGE": "hello",
+])
+
+test.environment([
+        "WELCOME_MESSAGE": "Hello from test",
+])
+
 dependencies {
     //implementation 'org.springframework.boot:spring-boot-starter:2.2.4.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter'
@@ -16,4 +24,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework:spring-web'
     implementation 'org.springframework:spring-webmvc'
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    test {
+        useJUnitPlatform()
+    }
 }
