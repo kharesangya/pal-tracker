@@ -6,3 +6,8 @@ applications:
     env:
       WELCOME_MESSAGE: Hello from Cloud Foundry
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+      "CF_API_URL": "http://pal-tracker-talkative-bandicoot-sm.apps.evans.pal.pivotal.io/",
+      "CF_ORG": "skhare5.ford.com",
+      "CF_SPACE": "sandbox",
+      "CF_USERNAME": "skhare5@ford.com",
+      "CF_PASSWORD": "sxscxuem"
