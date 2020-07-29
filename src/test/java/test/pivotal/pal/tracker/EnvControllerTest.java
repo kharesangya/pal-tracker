@@ -16,7 +16,6 @@ public class EnvControllerTest {
 
         Map<String, String> env = controller.getEnv();
 
-
         assert(env.get("PORT")).equals("8675");
         assert(env.get("MEMORY_LIMIT")).equals("12G");
         assert(env.get("CF_INSTANCE_INDEX")).equals("34");
